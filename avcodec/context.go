@@ -172,6 +172,10 @@ func (ctxt *Context) SetTimebase(num1 int, den1 int) {
 	ctxt.time_base.den = C.int(den1)
 }
 
+func (ctxt *Context) SetSampleRate(sampleRate int) {
+	ctxt.sample_rate = C.int(sampleRate)
+}
+
 func (ctxt *Context) SetEncodeParams2(width int, height int, pxlFmt PixelFormat, hasBframes bool, gopSize int) {
 	ctxt.width = C.int(width)
 	ctxt.height = C.int(height)
